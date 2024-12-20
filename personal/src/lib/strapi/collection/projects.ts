@@ -20,7 +20,7 @@ export interface Project {
 
 export default async function getAllProjects() {
   const strapiProjects = (await strapi.find<StrapiProject[]>("projects", {
-    sort: ["priority", "createdAt"],
+    sort: ["priority:desc", "createdAt:asc"],
     populate: "*"
   })).data;
   return strapiProjects.map(project => ({
