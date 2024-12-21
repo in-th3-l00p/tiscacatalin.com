@@ -31,7 +31,7 @@ export async function getAllArticles() {
   const articles: Article[] = (await strapi.find<StrapiArticle[]>(
     "articles",
     {
-      sort: "createdAt",
+      sort: "createdAt:desc",
       fields: [ "id", "title", "slug", "description", "createdAt" ]
     }
   ))
