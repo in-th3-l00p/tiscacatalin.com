@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Tișcă Cătălin',
     default:
-      'Tișcă Cătălin - Software developer, & exploration enthusiast',
+      'Tișcă Cătălin - Software developer & exploration enthusiast',
   },
   description:
     '',
