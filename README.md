@@ -72,4 +72,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - [Tailwind UI](https://tailwindui.com/) for the beautiful Spotlight template.
 - [Strapi](https://strapi.io/) for the flexible and easy-to-use CMS.
-- [Next.js](https://nextjs.org/) and [Vercel](https://vercel.com/) for the powerful frontend framework and hosting.
+- [Next.js](https://nextjs.org/) for the powerful framework.
