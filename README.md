@@ -45,70 +45,14 @@ Strapi serves as the backend for managing content:
 
 ---
 
-## 🚀 Getting Started
-
-### Prerequisites
-- Node.js (v16 or higher)
-- npm or yarn
-- Strapi CMS instance (local or hosted)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/in-th3-l00p/tiscacatalin.com.git
-   cd tiscacatalin.com
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-
-3. **Set up environment variables**
-   Create a `.env.local` file in the root directory and add the following:
-   ```env
-   NEXT_PUBLIC_STRAPI_API_URL=your_strapi_api_url
-   ```
-
-4. **Run the development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-
-5. **Build for production**
-   ```bash
-   npm run build
-   npm start
-   ```
-
----
-
 ## 📂 Project Structure
 
 ```
 tiscacatalin.com/
-├── components/       # Reusable React components
-├── pages/            # Next.js pages and API routes
-├── styles/           # Custom Tailwind CSS styles
-├── public/           # Static assets (images, fonts, etc.)
-├── lib/              # Utility functions and helpers
-├── strapi/           # Strapi CMS configuration (if included)
+├── cms               # Strapi CMS
+├── personal          # Next.js app
 └── README.md         # This file
 ```
-
----
-
-## 📝 Blog & Content Management
-
-The blog section is powered by Strapi CMS. To add or modify blog posts:
-1. Log in to your Strapi admin panel.
-2. Navigate to the "Blog Posts" collection type.
-3. Create, edit, or delete posts as needed.
 
 ---
 
