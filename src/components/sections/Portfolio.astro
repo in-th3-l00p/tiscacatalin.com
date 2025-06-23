@@ -1,0 +1,75 @@
+---
+import Link from "../Link.astro";
+
+const projects = [
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    thumbnail: "/images/project-1.webp",
+    url: "/projects/ecommerce-platform",
+    pubDate: "2024-01-15"
+  },
+  {
+    id: 2,
+    title: "Mobile Banking App",
+    thumbnail: "/images/project-2.webp",
+    url: "/projects/mobile-banking",
+    pubDate: "2024-02-20"
+  },
+  {
+    id: 3,
+    title: "AI Chat Assistant",
+    thumbnail: "/images/project-3.webp",
+    url: "/projects/ai-chat",
+    pubDate: "2024-03-10"
+  }
+];
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+---
+
+<section>
+    <h2 class="text-2xl font-bold mb-8">portfolio</h2>
+
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+      {projects.map((project) => (
+        <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
+          <div class="group relative w-full">
+            <div class="aspect-video w-full overflow-hidden rounded-lg bg-gray-100 mb-4">
+              <img 
+                src={project.thumbnail} 
+                alt={project.title}
+                class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+              />
+            </div>
+            
+            <h3 class="font-semibold text-primary group-hover:text-secondary transition-colors">
+              <a href={project.url}>
+                <span class="absolute inset-0"></span>
+                {project.title}
+              </a>
+            </h3>
+          </div>
+        </article>
+      ))}
+    </div>
+
+    <div class="w-full flex justify-center mt-8">
+        <a href="/portfolio">
+            <button 
+                type="button" 
+                class="rounded-md cursor-pointer bg-primary px-3.5 py-1.5 text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors"
+            >
+                view all
+            </button>
+        </a>
+    </div>
+</section> 
