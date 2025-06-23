@@ -1,5 +1,6 @@
 ---
 import Link from "../Link.astro";
+import Button from "../Button.astro";
 
 const projects = [
   {
@@ -63,13 +64,8 @@ function formatDate(dateString: string): string {
     </div>
 
     <div class="w-full flex justify-center mt-8">
-        <a href="/portfolio">
-            <button 
-                type="button" 
-                class="rounded-md cursor-pointer bg-primary px-3.5 py-1.5 text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors"
-            >
-                view all
-            </button>
-        </a>
+        <Button href="/portfolio">
+            view all
+        </Button>
     </div>
 </section> 
