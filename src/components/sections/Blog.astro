@@ -1,5 +1,6 @@
 ---
-// Get all blog posts from the posts directory
+import Link from "../Link.astro";
+
 const posts = await Astro.glob('../../pages/posts/*.md');
 
 const sortedPosts = posts.sort((a, b) => {
@@ -23,24 +24,33 @@ function formatDate(dateString: string): string {
 
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {sortedPosts.map((post) => (
-        <article class="flex max-w-xl flex-col items-start justify-between">
+        <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
           <div class="flex items-center gap-x-4 text-xs">
-            <time datetime={post.frontmatter.pubDate} class="text-primary/80">
+            <time datetime={post.frontmatter.pubDate}>
               {formatDate(post.frontmatter.pubDate)}
             </time>
           </div>
           <div class="group relative">
-            <h3 class="mt-3 font-semibold group-hover:text-">
+            <h3 class="mt-3 font-semibold text-primary group-hover:text-secondary transition-colors">
               <a href={post.url}>
                 <span class="absolute inset-0"></span>
                 {post.frontmatter.title}
               </a>
             </h3>
-            <p class="mt-5 line-clamp-3 text-sm font-light text-primary/80">{post.frontmatter.description}</p>
+            <p class="mt-5 line-clamp-3 text-sm font-light ">{post.frontmatter.description}</p>
           </div>
         </article>
       ))}
     </div>
 
-    
+    <div class="w-full flex justify-center mt-8">
+        <a href="/blog">
+            <button 
+                type="button" 
+                class="rounded-md cursor-pointer bg-primary px-3.5 py-1.5 text-sm font-semibold text-secondary hover:bg-secondary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-secondary transition-colors"
+            >
+                view all
+            </button>
+        </a>
+    </div>
 </section> 
