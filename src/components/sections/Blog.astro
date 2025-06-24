@@ -1,6 +1,6 @@
 ---
 import Link from "../Link.astro";
-import Button from "../Button.astro";
+import Paragraph from "../Paragraph.astro";
 
 const posts = await Astro.glob('../../pages/posts/*.md');
 
@@ -21,7 +21,10 @@ function formatDate(dateString: string): string {
 ---
 
 <section>
-    <h2 class="text-2xl font-bold mb-8">blog</h2>
+    <div class="mb-8">
+        <h2 class="text-2xl font-bold">blog</h2>
+        <Paragraph>latest posts here, <Link href="/blog">discover more</Link></Paragraph>
+    </div>
 
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {sortedPosts.map((post) => (

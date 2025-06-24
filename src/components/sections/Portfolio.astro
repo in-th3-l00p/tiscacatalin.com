@@ -1,6 +1,7 @@
 ---
 import Link from "../Link.astro";
 import Button from "../Button.astro";
+import Paragraph from "../Paragraph.astro";
 
 const projects = [
   {
@@ -37,7 +38,10 @@ function formatDate(dateString: string): string {
 ---
 
 <section>
-    <h2 class="text-2xl font-bold mb-8">portfolio</h2>
+  <div class="mb-8">
+        <h2 class="text-2xl font-bold">portfolio</h2>
+        <Paragraph>the projects I'm most proud of, <Link href="/portfolio">see all here</Link></Paragraph>
+    </div>
 
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
       {projects.map((project) => (
