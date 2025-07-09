@@ -1,34 +1,20 @@
 ---
 import Link from "../Link.astro";
-import Button from "../Button.astro";
 import Paragraph from "../Paragraph.astro";
 
-const projects = [
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description: "A comprehensive e-commerce platform built with React, Node.js, and MongoDB.",
-    icon: "/demo.png",
-    url: "/portfolio/ecommerce-platform",
-    pubDate: "2024-01-15"
-  },
-  {
-    id: 2,
-    title: "Mobile Banking App",
-    description: "A mobile banking app built with React Native, Firebase, and TypeScript.",
-    icon: "/demo.png",
-    url: "/portfolio/mobile-banking",
-    pubDate: "2024-02-20"
-  },
-  {
-    id: 3,
-    title: "AI Chat Assistant",
-    description: "An AI chat assistant built with Python, TensorFlow, and FastAPI.",
-    icon: "/demo.png",
-    url: "/portfolio/ai-chat",
-    pubDate: "2024-03-10"
-  }
-];
+const projects = await Promise.all(
+  Object.entries(import.meta.glob('../../pages/portfolio/*.md', { eager: true }))
+    .map(([path, project]) => ({
+      ...(project as any),
+      url: path.replace('../../pages', '').replace('.md', '')
+    }))
+);
+
+const sortedProjects = projects.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate);
+  const dateB = new Date(b.frontmatter.pubDate);
+  return dateB.getTime() - dateA.getTime();
+}).slice(0, 3);
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -47,12 +33,12 @@ function formatDate(dateString: string): string {
     </div>
 
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-      {projects.map((project) => (
+      {sortedProjects.map((project) => (
         <article class="group flex max-w-xl flex-col items-start text-primary/80 hover:text-secondary transition-colors">
           <div class="relative">
               <img 
-                src={project.icon} 
-                alt={project.title} 
+                src={project.frontmatter.icon} 
+                alt={project.frontmatter.title} 
                 class="w-10 h-10 invert" 
               />
           </div>
@@ -60,10 +46,10 @@ function formatDate(dateString: string): string {
             <h3 class="mt-4 font-semibold text-primary group-hover:text-secondary transition-colors">
               <a href={project.url}>
                 <span class="absolute inset-0"></span>
-                {project.title}
+                {project.frontmatter.title}
               </a>
             </h3>
-            <p class="mt-2 line-clamp-3 text-sm font-light ">{project.description}</p>
+            <p class="mt-2 line-clamp-3 text-sm font-light ">{project.frontmatter.description}</p>
           </div>
         </article>
       ))}
