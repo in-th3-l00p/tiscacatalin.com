@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "E-commerce Platform"
 description: "A comprehensive e-commerce platform built with React, Node.js, and MongoDB."
 pubDate: "2024-01-15"

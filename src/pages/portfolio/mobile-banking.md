@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "Mobile Banking App"
 description: "A mobile banking app built with React Native, Firebase, and TypeScript."
 pubDate: "2024-02-20"

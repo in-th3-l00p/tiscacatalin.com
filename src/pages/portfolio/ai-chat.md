@@ -1,4 +1,5 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "AI Chat Assistant"
 description: "An AI chat assistant built with Python, TensorFlow, and FastAPI."
 pubDate: "2024-03-10"
