@@ -1,0 +1,27 @@
+---
+import Layout from "./Layout.astro";
+
+export interface Props {
+  title: string;
+  description: string;
+  pubDate: string;
+  updatedDate?: string;
+}
+
+const props = Astro.props;
+console.log(props);
+
+// Format dates for display
+const formatDate = (dateString: string) => {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+};
+---
+
+<Layout>
+
+</Layout>

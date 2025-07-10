@@ -1,11 +1,10 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "Getting Started with Astro: A Beginner's Guide"
 description: "Learn the basics of Astro framework and how to build fast, modern websites with this powerful static site generator."
 pubDate: "2024-01-15"
 updatedDate: "2024-01-20"
 ---
-
-# Getting Started with Astro: A Beginner's Guide
 
 Astro is a modern static site generator that allows you to build fast, content-focused websites. In this guide, we'll explore the fundamentals of Astro and how it can revolutionize your web development workflow.
 

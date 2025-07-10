@@ -1,11 +1,10 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "10 Essential Web Performance Tips for 2024"
 description: "Learn the most important web performance optimization techniques that will make your websites lightning fast and improve user experience."
 pubDate: "2024-01-22"
 updatedDate: "2024-01-25"
 ---
-
-# 10 Essential Web Performance Tips for 2024
 
 Web performance is more critical than ever in today's fast-paced digital world. Users expect websites to load quickly, and search engines prioritize speed in their rankings. Here are 10 essential tips to optimize your website's performance.
 

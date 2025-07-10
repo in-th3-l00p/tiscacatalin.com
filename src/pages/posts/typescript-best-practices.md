@@ -1,11 +1,10 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "TypeScript Best Practices: Write Better, Safer Code"
 description: "Discover essential TypeScript best practices that will help you write more maintainable, type-safe, and robust applications."
 pubDate: "2024-02-05"
 updatedDate: "2024-02-08"
 ---
-
-# TypeScript Best Practices: Write Better, Safer Code
 
 TypeScript has revolutionized how we write JavaScript by adding static typing and modern language features. However, to truly benefit from TypeScript, you need to follow best practices that ensure type safety, maintainability, and developer productivity.
 

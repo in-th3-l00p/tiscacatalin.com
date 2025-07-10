@@ -1,11 +1,10 @@
 ---
+layout: "../../layouts/PostLayout.astro"
 title: "Mastering CSS Grid Layout: A Complete Guide"
 description: "Learn how to create complex, responsive layouts with CSS Grid. From basic concepts to advanced techniques, this guide covers everything you need to know."
 pubDate: "2024-01-28"
 updatedDate: "2024-02-01"
 ---
-
-# Mastering CSS Grid Layout: A Complete Guide
 
 CSS Grid Layout is one of the most powerful tools for creating complex, responsive web layouts. Unlike Flexbox, which is designed for one-dimensional layouts, Grid excels at two-dimensional layouts. Let's explore everything you need to know about CSS Grid.
 
