@@ -21,7 +21,7 @@ const { frontmatter } = Astro.props;
       <p class="text-sm">{frontmatter.pubDate}</p>
     </div>
     <h1 class="text-5xl font-bold max-w-2xl">{frontmatter.title}</h1>
-    <p>{frontmatter.description}</p>
+    <p class="text-primary/80">{frontmatter.description}</p>
   </section>
 
   <Separator />
