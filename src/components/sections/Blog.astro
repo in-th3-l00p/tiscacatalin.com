@@ -29,7 +29,7 @@ function formatDate(dateString: string): string {
 <section>
     <div class="mb-8">
         <h2 class="text-2xl font-bold">blog</h2>
-        <Paragraph>latest posts here, <Link href="/blog">discover more</Link></Paragraph>
+        <Paragraph>latest posts here, <Link href="/posts">discover more</Link></Paragraph>
     </div>
 
     <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3">
@@ -41,7 +41,7 @@ function formatDate(dateString: string): string {
             </time>
           </div>
           <div class="relative">
-            <h3 class="mt-4 font-semibold text-primary group-hover:text-secondary transition-colors">
+            <h3 class="mt-2 font-semibold text-primary group-hover:text-secondary transition-colors">
               <a href={post.url}>
                 <span class="absolute inset-0"></span>
                 {post.frontmatter.title}

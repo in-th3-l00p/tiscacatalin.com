@@ -1,0 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Circle from "../components/Circle.astro";
+import Separator from "../components/Separator.astro";
+
+const posts = await Promise.all(
+    Object.entries(import.meta.glob('./posts/*.md', { eager: true }))
+    .map(([path, post]) => ({
+      ...post as any,
+      url: path.replace('./posts', '/posts').replace('.md', '')
+    }))
+);
+
+const sortedPosts = posts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate);
+  const dateB = new Date(b.frontmatter.pubDate);
+  return dateB.getTime() - dateA.getTime();
+});
+
+console.log(sortedPosts);
+
+function formatDate(dateString: string): string {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+}
+---
+
+<Layout>
+    <section class="relative space-y-4">
+        <div class="flex items-center gap-4 text-primary/80">
+            <a href="/" class="text-sm hover:text-secondary transition-colors">home</a>
+            <p class="text-sm">{'>'}</p>
+            <p class="text-sm">posts</p>
+        </div>
+        <h1 class="text-5xl font-bold max-w-2xl">posts</h1>
+        <p>a collection of my thoughts and experiences</p>
+    </section>
+
+    <Separator />
+
+    <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-12 text-sm">
+        {sortedPosts.map((post) => (
+            <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
+            <div class="flex items-center gap-x-4 text-xs">
+                <time datetime={post.frontmatter.pubDate}>
+                {formatDate(post.frontmatter.pubDate)}
+                </time>
+            </div>
+            <div class="relative">
+                <h3 class="mt-4 font-semibold text-primary group-hover:text-secondary transition-colors">
+                <a href={post.url}>
+                    <span class="absolute inset-0"></span>
+                    {post.frontmatter.title}
+                </a>
+                </h3>
+                <p class="mt-2 line-clamp-3 text-sm font-light ">{post.frontmatter.description}</p>
+            </div>
+            </article>
+      ))}
+    </div>
+</Layout>
