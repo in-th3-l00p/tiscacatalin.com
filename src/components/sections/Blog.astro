@@ -33,6 +33,9 @@ function formatDate(dateString: string): string {
     </div>
 
     <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3">
+      {sortedPosts.length === 0 && (
+        <p class="text-primary/80">no posts yet, coming soon</p>
+      )}
       {sortedPosts.map((post) => (
         <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
           <div class="flex items-center gap-x-4 text-xs">

@@ -42,24 +42,28 @@ function formatDate(dateString: string): string {
 
     <Separator />
 
-    <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-12 text-sm">
-        {sortedPosts.map((post) => (
-            <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
-            <div class="flex items-center gap-x-4 text-xs">
-                <time datetime={post.frontmatter.pubDate}>
-                {formatDate(post.frontmatter.pubDate)}
-                </time>
-            </div>
-            <div class="relative">
-                <h3 class="mt-4 font-semibold text-primary group-hover:text-secondary transition-colors">
-                <a href={post.url}>
-                    <span class="absolute inset-0"></span>
-                    {post.frontmatter.title}
-                </a>
-                </h3>
-                <p class="mt-2 line-clamp-3 text-sm font-light ">{post.frontmatter.description}</p>
-            </div>
-            </article>
+    <div class="mx-auto space-x-8 space-y-12 text-sm">
+      {sortedPosts.length === 0 && (
+        <p class="text-primary/80 text-center">no posts yet, coming soon</p>
+      )}
+
+      {sortedPosts.map((post) => (
+          <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
+          <div class="flex items-center gap-x-4 text-xs">
+              <time datetime={post.frontmatter.pubDate}>
+              {formatDate(post.frontmatter.pubDate)}
+              </time>
+          </div>
+          <div class="relative">
+              <h3 class="mt-4 font-semibold text-primary group-hover:text-secondary transition-colors">
+              <a href={post.url}>
+                  <span class="absolute inset-0"></span>
+                  {post.frontmatter.title}
+              </a>
+              </h3>
+              <p class="mt-2 line-clamp-3 text-sm font-light ">{post.frontmatter.description}</p>
+          </div>
+          </article>
       ))}
     </div>
 </Layout>

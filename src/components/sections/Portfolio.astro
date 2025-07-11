@@ -33,6 +33,9 @@ function formatDate(dateString: string): string {
     </div>
 
     <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3">
+      {sortedProjects.length === 0 && (
+        <p class="text-primary/80">no projects yet, coming soon</p>
+      )}
       {sortedProjects.map((project) => (
         <article class="group flex max-w-xl items-center gap-4 lg:gap-0 lg:flex-col lg:items-start text-primary/80 hover:text-secondary transition-colors">
           <div class="relative flex-shrink-0">
