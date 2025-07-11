@@ -28,7 +28,7 @@ function formatDate(dateString: string): string {
 ---
 
 <Layout>
-    <section class="relative space-y-4">
+    <section class="relative space-y-4 px-6 lg:px-0">
         <div class="flex items-center gap-4 text-primary/80">
             <a href="/" class="text-sm hover:text-secondary transition-colors">home</a>
             <p class="text-sm">{'>'}</p>
@@ -40,7 +40,7 @@ function formatDate(dateString: string): string {
 
     <Separator />
 
-    <div class="mx-auto space-x-8 space-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3">
+    <section class="mx-auto space-x-8 space-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3 px-6 lg:px-0">
       {sortedPortfolioItems.length === 0 && (
         <p class="text-primary/80 text-center">no projects yet, coming soon</p>
       )}
@@ -65,5 +65,5 @@ function formatDate(dateString: string): string {
           </div>
         </article>
       ))}
-    </div>
+    </section>
 </Layout>
