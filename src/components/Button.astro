@@ -1,35 +1,35 @@
 ---
 export interface Props {
-  size?: 'sm' | 'md' | 'lg';
-  href?: string;
+  variant?: 'primary' | 'secondary';
+  className?: string;
+  onClick?: string;
+  disabled?: boolean;
   type?: 'button' | 'submit';
-  class?: string;
 }
 
 const { 
-  size = 'md', 
-  href, 
-  type = 'button',
-  class: className = ''
+  variant = 'primary',
+  className = '',
+  onClick,
+  disabled = false,
+  type = 'button'
 } = Astro.props;
 
-const baseClasses = "rounded-md cursor-pointer font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 transition-colors";
+const baseClasses = "cursor-pointer px-4 py-2 rounded-lg transition-all text-xs";
 
-const sizeClasses = {
-  sm: "px-2.5 py-1 text-xs",
-  md: "px-3.5 py-1.5 text-sm",
-  lg: "px-4 py-2 text-base"
+const variantClasses = {
+  primary: "bg-secondary hover:bg-secondary/60 border border-primary/40",
+  secondary: "bg-primary/10 hover:bg-primary/20 border border-primary/20"
 };
 
-const classes = `${baseClasses} ${sizeClasses[size]} ${className}`;
+const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
 ---
 
-{href ? (
-  <a href={href} class={classes}>
-    <slot />
-  </a>
-) : (
-  <button type={type} class={classes}>
-    <slot />
-  </button>
-)} 
+<button 
+  type={type}
+  class={classes}
+  onclick={onClick}
+  disabled={disabled}
+>
+  <slot />
+</button> 
