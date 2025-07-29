@@ -37,7 +37,7 @@ function formatDate(dateString: string): string {
         <p class="text-primary/80">no posts yet, coming soon</p>
       )}
       {sortedPosts.map((post) => (
-        <article class="group flex max-w-xl flex-col items-start justify-between text-primary/80 hover:text-secondary transition-colors">
+        <article class="group flex max-w-xl flex-col items-start justify-start text-primary/80 hover:text-secondary transition-colors">
           <div class="flex items-center gap-x-4 text-xs">
             <time datetime={post.frontmatter.pubDate}>
               {formatDate(post.frontmatter.pubDate)}
@@ -50,7 +50,7 @@ function formatDate(dateString: string): string {
                 {post.frontmatter.title}
               </a>
             </h3>
-            <p class="mt-2 line-clamp-3 text-sm font-light ">{post.frontmatter.description}</p>
+            <p class="mt-2 line-clamp-4 text-sm font-light ">{post.frontmatter.description}</p>
           </div>
         </article>
       ))}

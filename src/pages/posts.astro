@@ -17,8 +17,6 @@ const sortedPosts = posts.sort((a, b) => {
   return dateB.getTime() - dateA.getTime();
 });
 
-console.log(sortedPosts);
-
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
   return date.toLocaleDateString('en-US', {
