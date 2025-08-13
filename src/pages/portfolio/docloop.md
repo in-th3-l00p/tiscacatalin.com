@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "docloop"
-description: "platform for creating PDFs, completely from client-side using WASM"
+description: "web app for creating PDFs, completely from client-side using WASM"
 pubDate: "2025-07-12"
 icon: "/projects/docloop/docloop.png"
 technologies: ["rust", "wasm", "react", "tailwind"]
