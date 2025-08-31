@@ -5,7 +5,7 @@ description: "budget planner, income tracker, make smart money moves through a w
 pubDate: "2025-07-12"
 icon: "/projects/cashloop/icon.svg"
 technologies: ["typescript", "supabase", "openai"]
-status: "completed"
+status: "development"
 live: "https://cashloop.tiscacatalin.com"
 source: "https://github.com/in-th3-l00p/cashloop"
 ---
