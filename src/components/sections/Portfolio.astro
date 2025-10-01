@@ -11,6 +11,10 @@ const projects = await Promise.all(
 );
 
 const sortedProjects = projects.sort((a, b) => {
+  const priorityA = (a.frontmatter as any).priority ?? Infinity;
+  const priorityB = (b.frontmatter as any).priority ?? Infinity;
+  if (priorityA !== priorityB) return priorityA - priorityB;
+
   const dateA = new Date(a.frontmatter.pubDate);
   const dateB = new Date(b.frontmatter.pubDate);
   return dateB.getTime() - dateA.getTime();

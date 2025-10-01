@@ -9,6 +9,7 @@ status: "completed"
 github: "https://github.com/username/ai-chat-assistant"
 live: "https://docloop.tiscacatalin.com"
 source: "https://github.com/in-th3-l00p/docloop"
+priority: 3
 ---
 
 *it had happened so many times for me to search online for tools such as an image to pdf convertor, and all I got
