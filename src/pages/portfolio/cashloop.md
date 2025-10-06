@@ -8,7 +8,7 @@ technologies: ["typescript", "supabase", "openai"]
 status: "development"
 live: "https://cashloop.tiscacatalin.com"
 source: "https://github.com/in-th3-l00p/cashloop"
-priority: 1
+priority: 0
 ---
 
 *"ngl I was never good at making money moves, therefore I've realized that tracking the 

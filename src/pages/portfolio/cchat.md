@@ -6,7 +6,7 @@ pubDate: "2025-10-01"
 icon: "/projects/cchat/icon.svg"
 technologies: ["c", "posix sockets", "select(2)", "getline(3)", "make"]
 status: "completed"
-priority: 2
+priority: 1
 source: "https://github.com/in-th3-l00p/cchat"
 ---
 
