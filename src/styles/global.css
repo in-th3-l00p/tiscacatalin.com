@@ -15,6 +15,12 @@
   @apply mb-12;
 }
 
+.prose p:has(+ ul),
+.prose p:has(+ ol),
+.prose p:has(+ pre) {
+  @apply mb-4;
+}
+
 .prose .astro-code {
   @apply rounded-lg p-4 w-full max-w-xl self-center mb-12 text-sm;
 }
