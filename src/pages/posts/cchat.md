@@ -3,6 +3,8 @@ layout: "../../layouts/PostLayout.astro"
 title: "the C select function & the internet"
 description: "an introduction to network programming \\w a chat app"
 pubDate: "2025-10-12"
+medium: "https://medium.com/@inth3l00p/the-c-select-function-the-internet-58f6068d3cfd"
+source: "https://github.com/in-th3-l00p/cchat/tree/article"
 ---
 
 Network programming is the best and worst field that you can put your hands on when learning a programming language, or programming in general. This article will demonstrate how to enable multiple programs to communicate with each other at a fundamental level.

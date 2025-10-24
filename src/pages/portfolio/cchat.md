@@ -7,6 +7,8 @@ icon: "/projects/cchat/icon.svg"
 technologies: ["c", "posix sockets", "select(2)", "getline(3)", "make"]
 status: "completed"
 priority: 1
+article: "https://tiscacatalin.com/posts/cchat"
+medium: "https://medium.com/@inth3l00p/the-c-select-function-the-internet-58f6068d3cfd"
 source: "https://github.com/in-th3-l00p/cchat"
 ---
 
