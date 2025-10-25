@@ -26,6 +26,11 @@ const { frontmatter } = Astro.props;
     <p class="text-primary/80">{frontmatter.description}</p>
     {(frontmatter.live || frontmatter.source || frontmatter.medium || frontmatter.article) && (
       <div class="flex gap-4 flex-wrap">
+        {frontmatter.live && (
+            <a href={frontmatter.live}>
+              <Button>preview</Button>
+            </a>
+        )}
         {frontmatter.article && (
             <a href={frontmatter.article}>
               <Button>article</Button>
@@ -34,11 +39,6 @@ const { frontmatter } = Astro.props;
         {frontmatter.medium && (
             <a href={frontmatter.medium}>
               <Button variant="secondary">medium</Button>
-            </a>
-        )}
-        {frontmatter.live && (
-            <a href={frontmatter.live}>
-              <Button>preview</Button>
             </a>
         )}
         {frontmatter.source && (
