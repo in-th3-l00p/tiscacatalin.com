@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "cchat"
-description: "tiny chat — one server, many clients. I/O multiplexing in C; a gentle intro to network programming."
+description: "I/O multiplexing in C, through a CLI chat app from scratch, meant for showcasing sockets"
 pubDate: "2025-10-01"
 icon: "/projects/cchat/icon.svg"
 technologies: ["c", "posix sockets", "select(2)", "getline(3)", "make"]
