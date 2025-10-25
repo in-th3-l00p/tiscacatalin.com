@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/PostLayout.astro"
 title: "beyondbrand"
-description: "saas 4 ai powered branding generation; powered by microservices"
+description: "saas 4 ai powered branding generation, made \\w microservices"
 pubDate: "2025-10-25"
 icon: "/projects/beyondbrand/logo.svg"
 status: "prototype"
