@@ -39,12 +39,12 @@ function formatDate(dateString: string): string {
             <p class="text-sm">portfolio</p>
         </div>
         <h1 class="text-5xl font-bold max-w-2xl">portfolio</h1>
-        <p>a collection of my work</p>
+        <p>a collection of my past personal projects</p>
     </section>
 
     <Separator />
 
-    <section class="mx-auto space-x-8 space-y-8 text-sm lg:text-base lg:mx-0 lg:grid-cols-3 px-6 lg:px-0">
+    <section class="mx-auto space-x-8 space-y-12 text-sm lg:text-base lg:mx-0 lg:grid-cols-3 px-6 lg:px-0">
       {sortedPortfolioItems.length === 0 && (
         <p class="text-primary/80 text-center">no projects yet, coming soon</p>
       )}
@@ -65,7 +65,7 @@ function formatDate(dateString: string): string {
                 {project.frontmatter.title}
               </a>
             </h3>
-            <p class="mt-2 line-clamp-3 text-sm font-light ">{project.frontmatter.description}</p>
+            <p class="line-clamp-3 text-sm font-light ">{project.frontmatter.description}</p>
           </div>
         </article>
       ))}
