@@ -8,7 +8,7 @@ technologies: ["python", "streamlit", "opencv", "numpy", "docker"]
 status: "completed"
 live: "https://seamcarving.tiscacatalin.com/"
 source: "https://github.com/in-th3-l00p/seam-carving"
-priority: 1
+priority: 3
 ---
 
 ## content‑aware image retargeting
