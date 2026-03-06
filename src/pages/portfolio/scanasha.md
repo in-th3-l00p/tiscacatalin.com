@@ -7,7 +7,7 @@ icon: "/projects/scanasha/icon.svg"
 status: "prototype"
 source: "https://github.com/in-th3-l00p/scanasha"
 article: "https://www.cherryservers.com/blog/supporting-innovation-eth-bucharest-hackathon"
-priority: 0
+priority: 2
 ---
 
 created @ [ETH Bucharest 2025](https://ethbucharest.ro/) alongside [@Marc__Vlad](https://x.com/Marc__Vlad), [Emilien Duc](https://www.linkedin.com/in/emilien-duc-561b38194/) & [Yves Boutellier](https://www.linkedin.com/in/yvesboutellier/)

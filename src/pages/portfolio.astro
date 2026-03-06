@@ -44,18 +44,18 @@ function formatDate(dateString: string): string {
 
     <Separator />
 
-    <section class="mx-auto space-x-8 space-y-12 text-sm lg:text-base lg:mx-0 lg:grid-cols-3 px-6 lg:px-0">
+    <div class="mx-auto grid grid-cols-1 gap-x-8 gap-y-16 text-sm lg:text-base lg:mx-0 lg:grid-cols-3 px-6 lg:px-0">
       {sortedPortfolioItems.length === 0 && (
-        <p class="text-primary/80 text-center">no projects yet, coming soon</p>
+        <p class="text-primary/80">no projects yet, coming soon</p>
       )}
 
       {sortedPortfolioItems.map((project) => (
         <article class="group flex max-w-xl items-center gap-4 lg:gap-0 lg:flex-col lg:items-start text-primary/80 hover:text-secondary transition-colors">
           <div class="relative flex-shrink-0">
-              <img 
-                src={project.frontmatter.icon} 
-                alt={project.frontmatter.title} 
-                class="w-10 h-10 aspect-square" 
+              <img
+                src={project.frontmatter.icon}
+                alt={project.frontmatter.title}
+                class="w-10 h-10 aspect-square"
               />
           </div>
           <div class="relative">
@@ -65,9 +65,9 @@ function formatDate(dateString: string): string {
                 {project.frontmatter.title}
               </a>
             </h3>
-            <p class="line-clamp-3 text-sm font-light ">{project.frontmatter.description}</p>
+            <p class="mt-2 line-clamp-3 text-sm font-light ">{project.frontmatter.description}</p>
           </div>
         </article>
       ))}
-    </section>
+    </div>
 </Layout>

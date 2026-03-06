@@ -6,7 +6,7 @@ pubDate: "2025-10-25"
 icon: "/projects/beyondbrand/logo.svg"
 status: "prototype"
 source: "https://github.com/in-th3-l00p/beyondbrand/tree/mai"
-priority: 1
+priority: 3
 ---
 
 ![screenshot that showcases business pitch generation](/projects/beyondbrand/screenshot1.png)
