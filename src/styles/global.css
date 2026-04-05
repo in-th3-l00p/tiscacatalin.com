@@ -57,3 +57,76 @@
   display: block;
   text-align: center;
 }
+
+/* screenshot gallery */
+.screenshot-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.screenshot-gallery img {
+  @apply rounded-lg w-full h-auto object-cover cursor-pointer transition-opacity duration-200 !p-0 !m-0 !max-w-none !max-h-none aspect-video;
+}
+
+.screenshot-gallery img:hover {
+  opacity: 0.8;
+}
+
+.screenshot-gallery img:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 1024px) {
+  .screenshot-gallery {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 0.5rem;
+  }
+
+  .screenshot-gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screenshot-gallery img {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
+  }
+}
+
+/* lightbox dialog */
+.screenshot-dialog {
+  @apply fixed inset-0 z-50 bg-base/90 backdrop-blur-sm border-none p-0 m-0 w-full h-full max-w-none max-h-none;
+}
+
+.screenshot-dialog::backdrop {
+  background: transparent;
+}
+
+.screenshot-dialog .dialog-content {
+  @apply flex items-center justify-center w-full h-full relative;
+}
+
+.screenshot-dialog .dialog-content img {
+  @apply max-w-[90vw] max-h-[90vh] object-contain rounded-lg !p-0 !m-0;
+}
+
+.screenshot-dialog .dialog-close {
+  @apply absolute top-4 right-4 text-primary/80 hover:text-secondary transition-colors cursor-pointer text-2xl bg-transparent border-none;
+}
+
+.screenshot-dialog .dialog-nav {
+  @apply absolute top-1/2 -translate-y-1/2 text-primary/80 hover:text-secondary transition-colors cursor-pointer text-3xl bg-transparent border-none px-4;
+}
+
+.screenshot-dialog .dialog-nav.prev {
+  @apply left-2;
+}
+
+.screenshot-dialog .dialog-nav.next {
+  @apply right-2;
+}
