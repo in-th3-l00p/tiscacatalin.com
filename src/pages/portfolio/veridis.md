@@ -7,7 +7,7 @@ icon: "/projects/veridis/icon.svg"
 status: "development"
 live: "https://veridis.tiscacatalin.com"
 source: "https://github.com/in-th3-l00p/veridis"
-priority: 2
+priority: 3
 ---
 
 **veridis** is a cryptographic verification layer for real world product claims. brands and suppliers generate cryptographic proof for claims like organic, locally sourced, or certified — instead of relying on PDFs and trust.
